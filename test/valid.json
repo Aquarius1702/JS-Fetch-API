@@ -1,0 +1,1426 @@
+{
+    "page": {
+        "doctype": {
+            "insert": "<!DOCTYPE html>",
+            "description": "Type of document. This is information to the browser."
+        },
+        "html": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "head": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "body": {
+            "purpose": "Body of the HTML document",
+            "attributes": [],
+            "unique": true,
+            "description": ["The <body> tag defines the document's body.",
+                "The <body> element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.", ["Note:", "There can only be one <body> element in an HTML document."]
+            ]
+        },
+        "comment": {
+            "openclose": ["<!--", "-->"],
+            "description": "Put comment inside. Browser does not display it."
+        },
+        "template": "<!DOCTYPE html>\n\n<html>\n\n\t<head>\n\t</head>\n\n\t<body>\n\t</body>\n</html>\n"
+    },
+    "elements": {
+        "a": {
+            "purpose": "Create a link to page",
+            "default_attributes": [
+                ["href", "#"]
+            ],
+            "attributes": [
+                "download",
+                "href",
+                "hreflang",
+                "media",
+                "ping",
+                "referrerpolicy",
+                "rel",
+                "target",
+                "type"
+            ],
+            "description": ["The <a> tag defines a hyperlink, which is used to link from one page to another.",
+                "The most important attribute of the <a> element is the href attribute, which indicates the link's destination.", ["Tip:", "If the <a> tag has no href attribute, it is only a placeholder for a hyperlink."],
+                ["Tip:", "A linked page is normally displayed in the current browser window, unless you specify another target."]
+            ]
+        },
+        "abbr": {
+            "purpose": "An abbreviation is marked up",
+            "default_attributes": [
+                ["title", ""]
+            ],
+            "attributes": [],
+            "description": ["The <abbr> tag defines an abbreviation or an acronym, like HTML, CSS, Mr., Dr., ASAP, ATM.", ["Tip:", "Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element."]]
+        },
+        "address": {
+            "purpose": "Contact information",
+            "block": true,
+            "attributes": [],
+            "description": ["The <address> tag defines the contact information for the author/owner of a document or an article.",
+                "The contact information can be an email address, URL, physical address, phone number, social media handle, etc.",
+                "The text in the <address> element usually renders in italic, and browsers will always add a line break before and after the <address> element."
+            ]
+        },
+        "article": {
+            "purpose": "Articles with independent, self-contained content",
+            "block": true,
+            "attributes": [],
+            "description": ["The <article> tag specifies independent, self-contained content.",
+                "An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.", ["Note:", "The <article> element does not render as anything special in a browser. However, you can use CSS to style the <article> element."]
+            ]
+        },
+        "aside": {
+            "purpose": "Display some content aside from the content it is placed in",
+            "block": true,
+            "attributes": [],
+            "description": ["The <aside> tag defines some content aside from the content it is placed in.",
+                "The aside content should be indirectly related to the surrounding content.", ["Tip:", "The <aside> content is often placed as a sidebar in a document."],
+                ["Note:", "The <aside> element does not render as anything special in a browser. However, you can use CSS to style the <aside> element."]
+            ]
+        },
+        "audio": {
+            "purpose": "Play a sound file",
+            "block": true,
+            "attributes": ["controls"],
+            "default_attributes": [
+                ["controls", false]
+            ],
+            "description": ["The <audio> tag is used to embed sound content in a document, such as music or other audio streams.",
+                "The <audio> tag contains one or more <source> tags with different audio sources. The browser will choose the first source it supports.",
+                "The text between the <audio> and </audio> tags will only be displayed in browsers that do not support the <audio> element.",
+                "There are three supported audio formats in HTML: MP3, WAV, and OGG."
+            ]
+        },
+        "b": {
+            "purpose": "Make some text bold (without marking it as important)",
+            "attributes": [],
+            "description": [
+                "The <b> tag specifies bold text without any extra importance.", ["Note:", "According to the HTML5 specification, the <b> tag should be used as a LAST resort when no other tag is more appropriate. The specification states that headings should be denoted with the <h1> to <h6> tags, emphasized text should be denoted with the <em> tag, important text should be denoted with the <strong> tag, and marked/highlighted text should be denoted with the <mark> tag."],
+                ["Tip:", "You can also use the following CSS to set bold text: \"font-weight: bold;\"."]
+            ]
+        },
+        "base": {
+            "contained": "head",
+            "purpose": "Specify a default URL and a default target for all links on a page",
+            "attributes": ["href", "target"],
+            "eventAttributes": false,
+            "description": ""
+        },
+        "bdi": {
+            "purpose": "Isolate the usernames from the surrounding text-direction settings",
+            "attributes": [],
+            "description": ["BDI stands for Bi-Directional Isolation.",
+                "The <bdi> tag isolates a part of text that might be formatted in a different direction from other text outside it.",
+                "This element is useful when embedding user-generated content with an unknown text direction."
+            ]
+        },
+        "bdo": {
+            "purpose": "Specify the text direction",
+            "attributes": ["dir"],
+            "description": ["BDO stands for Bi-Directional Override.",
+                "The <bdo> tag is used to override the current text direction."
+            ]
+        },
+        "blockquote": {
+            "purpose": "A section that is quoted from another source",
+            "attributes": ["cite"],
+            "description": ["The <blockquote> tag specifies a section that is quoted from another source.",
+                "Browsers usually indent <blockquote> elements (use CSS to remove the indentation from the blockquote element: \"margin-left: 0;\")."
+            ]
+        },
+        "br": {
+            "purpose": "Insert single line breaks in a text",
+            "attributes": [],
+            "description": ["The <br> tag inserts a single line break.",
+                "The <br> tag is useful for writing addresses or poems.",
+                "The <br> tag is an empty tag which means that it has no end tag.", ["Note:", "Use the <br> tag to enter line breaks, not to add space between paragraphs."]
+            ]
+        },
+        "button": {
+            "purpose": "A clickable button",
+            "attributes": ["autofocus", "disabled", "form", "formaction", "formenctype", "formmethod", "formnovalidate", "formtarget", "name", "type", "value"],
+            "description": ["The <button> tag defines a clickable button.",
+                "Inside a <button> element you can put text (and tags like <i>, <b>, <strong>, <br>, <img>, etc.). That is not possible with a button created with the <input> element!", ["Tip:", "Always specify the type attribute for a <button> element, to tell browsers what type of button it is."],
+                ["Tip: You can easily style buttons with CSS! Look at the examples below or visit our CSS Buttons tutorial."]
+            ]
+        },
+        "canvas": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "caption": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "center": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "cite": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "code": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "col": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "colgroup": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "data": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "datalist": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "dd": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "del": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "details": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "dfn": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "dialog": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "dir": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "div": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "dl": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "dt": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "em": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "embed": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "fieldset": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "figcaption": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "figure": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "font": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "footer": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "form": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "frame": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "frameset": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "h1": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "h2": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "h3": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "h4": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "h5": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "h6": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "header": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "hr": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "i": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "iframe": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "img": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "input": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "ins": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "kbd": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "label": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "legend": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "li": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "link": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "main": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "map": {
+            "purpose": "",
+            "attributes": [],
+            "description": "",
+            "children": {
+                "area": {
+                    "purpose": "",
+                    "attributes": [],
+                    "description": ""
+                }
+            }
+        },
+        "mark": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "meta": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "meter": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "nav": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "noframes": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "noscript": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "object": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "ol": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "optgroup": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "option": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "output": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "p": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "param": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "picture": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "pre": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "progress": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "q": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "rp": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "rt": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "ruby": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "s": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "samp": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "script": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "section": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "select": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "small": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "source": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "span": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "strike": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "strong": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "style": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "sub": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "summary": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "sup": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "svg": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "table": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "tbody": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "td": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "template": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "textarea": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "tfoot": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "th": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "thead": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "time": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "title": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "tr": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "track": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "tt": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "u": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "ul": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "var": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "video": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        },
+        "wbr": {
+            "purpose": "",
+            "attributes": [],
+            "description": ""
+        }
+    },
+    "attributes": {
+        "global": {
+            "accesskey": {
+                "value": "[Alt] + accesskey",
+                "value_type": "character",
+                "description": "Specifies a shortcut key to activate/focus an element."
+            },
+            "class": {
+                "value": "classname",
+                "value_type": "text",
+                "description": "Specifies one or more classnames for an element (refers to a class in a style sheet)."
+            },
+            "contenteditable": {
+                "value": [
+                    "true",
+                    "false"
+                ],
+                "value_type": "list",
+                "description": "Specifies whether the content of an element is editable or not."
+            },
+            "data-*": {
+                "value": "data-[name] = value",
+                "value_type": "special",
+                "description": "Used to store custom data private to the page or application."
+            },
+            "dir": {
+                "value": ["ltr", "rtl", "auto"],
+                "value_type": "list",
+                "description": "Specifies the text direction for the content in an element."
+            },
+            "draggable": {
+                "value": "",
+                "value_type": "",
+                "description": "Specifies whether an element is draggable or not."
+            },
+            "hidden": {
+                "value": "",
+                "value_type": "",
+                "description": "Specifies that an element is not yet, or is no longer, relevant."
+            },
+            "id": {
+                "value": "",
+                "value_type": "",
+                "description": "Specifies a unique id for an element."
+            },
+            "lang": {
+                "value": "",
+                "value_type": "",
+                "description": "Specifies the language of the element's content."
+            },
+            "spellcheck": {
+                "value": "",
+                "value_type": "",
+                "description": "Specifies whether the element is to have its spelling and grammar checked or not."
+            },
+            "style": {
+                "value": "",
+                "value_type": "",
+                "description": "Specifies an inline CSS style for an element."
+            },
+            "tabindex": {
+                "value": "",
+                "value_type": "",
+                "description": "Specifies the tabbing order of an element."
+            },
+            "title": {
+                "value": "",
+                "value_type": "",
+                "description": "Specifies extra information about an element."
+            },
+            "translate": {
+                "value": "",
+                "value_type": "",
+                "description": "Specifies whether the content of an element should be translated or not."
+            }
+        },
+        "specific": {
+            "autofocus": {
+                "value": "autofocus",
+                "value_type": "",
+                "description": "Specifies that a button should automatically get focus when the page loads."
+            },
+            "disabled": {
+                "value": "disabled",
+                "value_type": "",
+                "description": "Specifies that a button should be disabled."
+            },
+            "download": {
+                "value": "filename",
+                "value_type": "text",
+                "description": "Specifies that the target will be downloaded when a user clicks on the hyperlink."
+            },
+            "form": {
+                "value": "form_id",
+                "value_type": "text",
+                "description": "Specifies which form the button belongs to."
+            },
+            "formaction": {
+                "value": "URL",
+                "value_type": "text",
+                "description": "Specifies where to send the form-data when a form is submitted. Only for type=\"submit\"."
+            },
+            "formenctype": {
+                "value": ["application/x-www-form-urlencoded", "multipart/form-data", "text/plain"],
+                "value_type": "list",
+                "description": "Specifies how form-data should be encoded before sending it to a server. Only for type=\"submit\"."
+            },
+            "formmethod": {
+                "value": ["get", "post"],
+                "value_type": "list",
+                "description": "Specifies how to send the form-data (which HTTP method to use). Only for type=\"submit\"."
+            },
+            "formnovalidate": {
+                "value": "formnovalidate",
+                "value_type": "",
+                "description": "Specifies that the form-data should not be validated on submission. Only for type=\"submit\"."
+            },
+            "formtarget": {
+                "value": ["_blank", "_self", "_parent", "_top", "framename"],
+                "value_type": "list",
+                "description": "Specifies where to display the response after submitting the form. Only for type=\"submit\"."
+            },
+            "href": {
+                "value": "URL",
+                "value_type": "text",
+                "description": "Specifies the URL of the page the link goes to."
+            },
+            "hreflang": {
+                "value": "language_code",
+                "value_type": "external_list",
+                "description": "Specifies the language of the linked document."
+            },
+            "media": {
+                "value": "media_query",
+                "value_type": "text",
+                "description": "Specifies what media/device the linked document is optimized for."
+            },
+            "name": {
+                "value": "name",
+                "value_type": "text",
+                "description": "Specifies a name for the button."
+            },
+            "ping": {
+                "value": "list_of_URLs",
+                "value_type": "text",
+                "description": "Specifies a space-separated list of URLs to which, when the link is followed, post requests with the body ping will be sent by the browser (in the background). Typically used for tracking."
+            },
+            "referrerpolicy": {
+                "value": ["no-referrer", "no-referrer-when-downgrade", "origin", "origin-when-cross-origin", "same-origin", "strict-origin-when-cross-origin", "unsafe-url"],
+                "value_type": "list",
+                "description": "Specifies which referrer information to send with the link."
+            },
+            "rel": {
+                "value": ["alternate", "author", "bookmark", "external", "help", "license", "next", "nofollow", "noreferrer", "noopener", "prev", "search", "tag"],
+                "value_type": "list",
+                "description": "Specifies the relationship between the current document and the linked document."
+            },
+            "target": {
+                "value": ["blank", "_parent", "_self", "_top"],
+                "value_type": "list",
+                "description": "Specifies where to open the linked document type."
+            },
+            "type": {
+                "value": "media_type",
+                "value_type": "external_list",
+                "description": "Specifies the media type of the linked document (SUBSET OF COMMON MEDIA TYPES)."
+            },
+            "type_button": {
+                "value": { "type": ["button", "reset", "submit"] },
+                "value_type": "list",
+                "description": "Specifies the media type of the linked document (SUBSET OF COMMON MEDIA TYPES)."
+            },
+            "value": {
+                "value": "value",
+                "value_type": "text",
+                "description": "Specifies an initial value for the button."
+            }
+        },
+        "event": {
+            "onafterprint": {
+                "value_type": "script",
+                "description": "Script to be run after the document is printed."
+            },
+            "onbeforeprint": {
+                "value_type": "script",
+                "description": "Script to be run before the document is printed."
+            },
+            "onbeforeunload": {
+                "value_type": "script",
+                "description": "Script to be run when the document is about to be unloaded."
+            },
+            "onerror": {
+                "value_type": "script",
+                "description": "Script to be run when an error occurs."
+            },
+            "onhashchange": {
+                "value_type": "script",
+                "description": "Script to be run when there has been changes to the anchor part of the a URL."
+            },
+            "onload": {
+                "value_type": "script",
+                "description": "Fires after the page is finished loading."
+            },
+            "onmessage": {
+                "value_type": "script",
+                "description": "Script to be run when the message is triggered."
+            },
+            "onoffline": {
+                "value_type": "script",
+                "description": "Script to be run when the browser starts to work offline."
+            },
+            "ononline": {
+                "value_type": "script",
+                "descr1iption": "Script to be run when the browser starts to work online."
+            },
+            "onpagehide": {
+                "value_type": "script",
+                "description": "Script to be run when a user navigates away from a page."
+            },
+            "onpageshow": {
+                "value_type": "script",
+                "description": "Script to be run when a user navigates to a page."
+            },
+            "onpopstate": {
+                "value_type": "script",
+                "description": "Script to be run when the window's history changes."
+            },
+            "onresize": {
+                "value_type": "script",
+                "description": "Fires when the browser window is resized."
+            },
+            "onstorage": {
+                "value_type": "script",
+                "description": "Script to be run when a Web Storage area is updated."
+            },
+            "onunload": {
+                "value_type": "script",
+                "description": "Fires once a page has unloaded (or the browser window has been closed)."
+            }
+        }
+    },
+    "external_lists": {
+        "language_code": {
+            "columns": ["Language", "ISO Code"],
+            "value": [
+                ["Abkhazian", "ab"],
+                ["Afar", "aa"],
+                ["Afrikaans", "af"],
+                ["Akan", "ak"],
+                ["Albanian", "sq"],
+                ["Amharic", "am"],
+                ["Arabic", "ar"],
+                ["Aragonese", "an"],
+                ["Armenian", "hy"],
+                ["Assamese", "as"],
+                ["Avaric", "av"],
+                ["Avestan", "ae"],
+                ["Aymara", "ay"],
+                ["Azerbaijani", "az"],
+                ["Bambara", "bm"],
+                ["Bashkir", "ba"],
+                ["Basque", "eu"],
+                ["Belarusian", "be"],
+                ["Bengali (Bangla)", "bn"],
+                ["Bihari", "bh"],
+                ["Bislama", "bi"],
+                ["Bosnian", "bs"],
+                ["Breton", "br"],
+                ["Bulgarian", "bg"],
+                ["Burmese", "my"],
+                ["Catalan", "ca"],
+                ["Chamorro", "ch"],
+                ["Chechen", "ce"],
+                ["Chichewa, Chewa, Nyanja", "ny"],
+                ["Chinese", "zh"],
+                ["Chinese (Simplified)", "zh-Hans"],
+                ["Chinese (Traditional)", "zh-Hant"],
+                ["Chuvash", "cv"],
+                ["Cornish", "kw"],
+                ["Corsican", "co"],
+                ["Cree", "cr"],
+                ["Croatian", "hr"],
+                ["Czech", "cs"],
+                ["Danish", "da"],
+                ["Divehi, Dhivehi, Maldivian", "dv"],
+                ["Dutch", "nl"],
+                ["Dzongkha", "dz"],
+                ["English", "en"],
+                ["Esperanto", "eo"],
+                ["Estonian", "et"],
+                ["Ewe", "ee"],
+                ["Faroese", "fo"],
+                ["Fijian", "fj"],
+                ["Finnish", "fi"],
+                ["French", "fr"],
+                ["Fula, Fulah, Pulaar, Pular", "ff"],
+                ["Galician", "gl"],
+                ["Gaelic (Scottish)", "gd"],
+                ["Gaelic (Manx)", "gv"],
+                ["Georgian", "ka"],
+                ["German", "de"],
+                ["Greek", "el"],
+                ["Greenlandic", "kl"],
+                ["Guarani", "gn"],
+                ["Gujarati", "gu"],
+                ["Haitian Creole", "ht"],
+                ["Hausa", "ha"],
+                ["Hebrew", "he"],
+                ["Herero", "hz"],
+                ["Hindi", "hi"],
+                ["Hiri Motu", "ho"],
+                ["Hungarian", "hu"],
+                ["Icelandic", "is"],
+                ["Ido", "io"],
+                ["Igbo", "ig"],
+                ["Indonesian", "id, in"],
+                ["Interlingua", "ia"],
+                ["Interlingue", "ie"],
+                ["Inuktitut", "iu"],
+                ["Inupiak", "ik"],
+                ["Irish", "ga"],
+                ["Italian", "it"],
+                ["Japanese", "ja"],
+                ["Javanese", "jv"],
+                ["Kalaallisut, Greenlandic", "kl"],
+                ["Kannada", "kn"],
+                ["Kanuri", "kr"],
+                ["Kashmiri", "ks"],
+                ["Kazakh", "kk"],
+                ["Khmer", "km"],
+                ["Kikuyu", "ki"],
+                ["Kinyarwanda (Rwanda)", "rw"],
+                ["Kirundi", "rn"],
+                ["Kyrgyz", "ky"],
+                ["Komi", "kv"],
+                ["Kongo", "kg"],
+                ["Korean", "ko"],
+                ["Kurdish", "ku"],
+                ["Kwanyama", "kj"],
+                ["Lao", "lo"],
+                ["Latin", "la"],
+                ["Latvian (Lettish)", "lv"],
+                ["Limburgish ( Limburger)", "li"],
+                ["Lingala", "ln"],
+                ["Lithuanian", "lt"],
+                ["Luga-Katanga", "lu"],
+                ["Luganda, Ganda", "lg"],
+                ["Luxembourgish", "lb"],
+                ["Manx", "gv"],
+                ["Macedonian", "mk"],
+                ["Malagasy", "mg"],
+                ["Malay", "ms"],
+                ["Malayalam", "ml"],
+                ["Maltese", "mt"],
+                ["Maori", "mi"],
+                ["Marathi", "mr"],
+                ["Marshallese", "mh"],
+                ["Moldavian", "mo"],
+                ["Mongolian", "mn"],
+                ["Nauru", "na"],
+                ["Navajo", "nv"],
+                ["Ndonga", "ng"],
+                ["Northern Ndebele", "nd"],
+                ["Nepali", "ne"],
+                ["Norwegian", "no"],
+                ["Norwegian bokmål", "nb"],
+                ["Norwegian nynorsk", "nn"],
+                ["Nuosu", "ii"],
+                ["Occitan", "oc"],
+                ["Ojibwe", "oj"],
+                ["Old Church Slavonic, Old Bulgarian", "cu"],
+                ["Oriya", "or"],
+                ["Oromo (Afaan Oromo)", "om"],
+                ["Ossetian", "os"],
+                ["Pāli", "pi"],
+                ["Pashto, Pushto", "ps"],
+                ["Persian (Farsi)", "fa"],
+                ["Polish", "pl"],
+                ["Portuguese", "pt"],
+                ["Punjabi (Eastern)", "pa"],
+                ["Quechua", "qu"],
+                ["Romansh", "rm"],
+                ["Romanian", "ro"],
+                ["Russian", "ru"],
+                ["Sami", "se"],
+                ["Samoan", "sm"],
+                ["Sango", "sg"],
+                ["Sanskrit", "sa"],
+                ["Serbian", "sr"],
+                ["Serbo-Croatian", "sh"],
+                ["Sesotho", "st"],
+                ["Setswana", "tn"],
+                ["Shona", "sn"],
+                ["Sichuan Yi", "ii"],
+                ["Sindhi", "sd"],
+                ["Sinhalese", "si"],
+                ["Siswati", "ss"],
+                ["Slovak", "sk"],
+                ["Slovenian", "sl"],
+                ["Somali", "so"],
+                ["Southern Ndebele", "nr"],
+                ["Spanish", "es"],
+                ["Sundanese", "su"],
+                ["Swahili (Kiswahili)", "sw"],
+                ["Swati", "ss"],
+                ["Swedish", "sv"],
+                ["Tagalog", "tl"],
+                ["Tahitian", "ty"],
+                ["Tajik", "tg"],
+                ["Tamil", "ta"],
+                ["Tatar", "tt"],
+                ["Telugu", "te"],
+                ["Thai", "th"],
+                ["Tibetan", "bo"],
+                ["Tigrinya", "ti"],
+                ["Tonga", "to"],
+                ["Tsonga", "ts"],
+                ["Turkish", "tr"],
+                ["Turkmen", "tk"],
+                ["Twi", "tw"],
+                ["Uyghur", "ug"],
+                ["Ukrainian", "uk"],
+                ["Urdu", "ur"],
+                ["Uzbek", "uz"],
+                ["Venda", "ve"],
+                ["Vietnamese", "vi"],
+                ["Volapük", "vo"],
+                ["Wallon", "wa"],
+                ["Welsh", "cy"],
+                ["Wolof", "wo"],
+                ["Western Frisian", "fy"],
+                ["Xhosa", "xh"],
+                ["Yiddish", "yi, ji"],
+                ["Yoruba", "yo"],
+                ["Zhuang, Chuang", "za"],
+                ["Zulu", "zu"]
+            ]
+        },
+        "country_code": {
+            "columns": ["Country", "ISO Code"],
+            "value": [
+                ["AFGHANISTAN", "AF"],
+                ["ALBANIA", "AL"],
+                ["ALGERIA", "DZ"],
+                ["AMERICAN SAMOA", "AS"],
+                ["ANDORRA", "AD"],
+                ["ANGOLA", "AO"],
+                ["ANTARCTICA", "AQ"],
+                ["ANTIGUA AND BARBUDA", "AG"],
+                ["ARGENTINA", "AR"],
+                ["ARMENIA", "AM"],
+                ["ARUBA", "AW"],
+                ["AUSTRALIA", "AU"],
+                ["AUSTRIA", "AT"],
+                ["AZERBAIJAN", "AZ"],
+                ["BAHAMAS", "BS"],
+                ["BAHRAIN", "BH"],
+                ["BANGLADESH", "BD"],
+                ["BARBADOS", "BB"],
+                ["BELARUS", "BY"],
+                ["BELGIUM", "BE"],
+                ["BELIZE", "BZ"],
+                ["BENIN", "BJ"],
+                ["BERMUDA", "BM"],
+                ["BHUTAN", "BT"],
+                ["BOLIVIA", "BO"],
+                ["BOSNIA AND HERZEGOVINA", "BA"],
+                ["BOTSWANA", "BW"],
+                ["BOUVET ISLAND", "BV"],
+                ["BRAZIL", "BR"],
+                ["BRITISH INDIAN OCEAN TERRITORY", "IO"],
+                ["BRUNEI DARUSSALAM", "BN"],
+                ["BULGARIA", "BG"],
+                ["BURKINA FASO", "BF"],
+                ["BURUNDI", "BI"],
+                ["CAMBODIA", "KH"],
+                ["CAMEROON", "CM"],
+                ["CANADA", "CA"],
+                ["CAPE VERDE", "CV"],
+                ["CAYMAN ISLANDS", "KY"],
+                ["CENTRAL AFRICAN REPUBLIC", "CF"],
+                ["CHAD", "TD"],
+                ["CHILE", "CL"],
+                ["CHINA", "CN"],
+                ["CHRISTMAS ISLAND", "CX"],
+                ["COCOS (KEELING) ISLANDS", "CC"],
+                ["COLOMBIA", "CO"],
+                ["COMOROS", "KM"],
+                ["CONGO", "CG"],
+                ["CONGO, THE DEMOCRATIC REPUBLIC OF THE", "CD"],
+                ["COOK ISLANDS", "CK"],
+                ["COSTA RICA", "CR"],
+                ["CÔTE D'IVOIRE", "CI"],
+                ["CROATIA", "HR"],
+                ["CUBA", "CU"],
+                ["CYPRUS", "CY"],
+                ["CZECH REPUBLIC", "CZ"],
+                ["DENMARK", "DK"],
+                ["DJIBOUTI", "DJ"],
+                ["DOMINICA", "DM"],
+                ["DOMINICAN REPUBLIC", "DO"],
+                ["ECUADOR", "EC"],
+                ["EGYPT", "EG"],
+                ["EL SALVADOR", "SV"],
+                ["EQUATORIAL GUINEA", "GQ"],
+                ["ERITREA", "ER"],
+                ["ESTONIA", "EE"],
+                ["ETHIOPIA", "ET"],
+                ["FALKLAND ISLANDS (MALVINAS)", "FK"],
+                ["FAROE ISLANDS", "FO"],
+                ["FIJI", "FJ"],
+                ["FINLAND", "FI"],
+                ["FRANCE", "FR"],
+                ["FRENCH GUIANA", "GF"],
+                ["FRENCH POLYNESIA", "PF"],
+                ["FRENCH SOUTHERN TERRITORIES", "TF"],
+                ["GABON", "GA"],
+                ["GAMBIA", "GM"],
+                ["GEORGIA", "GE"],
+                ["GERMANY", "DE"],
+                ["GHANA", "GH"],
+                ["GIBRALTAR", "GI"],
+                ["GREECE", "GR"],
+                ["GREENLAND", "GL"],
+                ["GRENADA", "GD"],
+                ["GUADELOUPE", "GP"],
+                ["GUAM", "GU"],
+                ["GUATEMALA", "GT"],
+                ["GUINEA", "GN"],
+                ["GUINEA-BISSAU", "GW"],
+                ["GUYANA", "GY"],
+                ["HAITI", "HT"],
+                ["HEARD ISLAND AND MCDONALD ISLANDS", "HM"],
+                ["HONDURAS", "HN"],
+                ["HONG KONG", "HK"],
+                ["HUNGARY", "HU"],
+                ["ICELAND", "IS"],
+                ["INDIA", "IN"],
+                ["INDONESIA", "ID"],
+                ["IRAN, ISLAMIC REPUBLIC OF", "IR"],
+                ["IRAQ", "IQ"],
+                ["IRELAND", "IE"],
+                ["ISRAEL", "IL"],
+                ["ITALY", "IT"],
+                ["JAMAICA", "JM"],
+                ["JAPAN", "JP"],
+                ["JORDAN", "JO"],
+                ["KAZAKHSTAN", "KZ"],
+                ["KENYA", "KE"],
+                ["KIRIBATI", "KI"],
+                ["KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF", "KP"],
+                ["KOREA, REPUBLIC OF", "KR"],
+                ["KUWAIT", "KW"],
+                ["KYRGYZSTAN", "KG"],
+                ["LAO PEOPLE'S DEMOCRATIC REPUBLIC (LAOS)", "LA"],
+                ["LATVIA", "LV"],
+                ["LEBANON", "LB"],
+                ["LESOTHO", "LS"],
+                ["LIBERIA", "LR"],
+                ["LIBYA, STATE OF", "LY"],
+                ["LIECHTENSTEIN", "LI"],
+                ["LITHUANIA", "LT"],
+                ["LUXEMBOURG", "LU"],
+                ["MACAO", "MO"],
+                ["MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF", "MK"],
+                ["MADAGASCAR", "MG"],
+                ["MALAWI", "MW"],
+                ["MALAYSIA", "MY"],
+                ["MALDIVES", "MV"],
+                ["MALI", "ML"],
+                ["MALTA", "MT"],
+                ["MARSHALL ISLANDS", "MH"],
+                ["MARTINIQUE", "MQ"],
+                ["MAURITANIA", "MR"],
+                ["MAURITIUS", "MU"],
+                ["MAYOTTE", "YT"],
+                ["MEXICO", "MX"],
+                ["MICRONESIA, FEDERATED STATES OF", "FM"],
+                ["MOLDOVA, REPUBLIC OF", "MD"],
+                ["MONACO", "MC"],
+                ["MONGOLIA", "MN"],
+                ["MONTENEGRO", "ME"],
+                ["MONTSERRAT", "MS"],
+                ["MOROCCO", "MA"],
+                ["MOZAMBIQUE", "MZ"],
+                ["MYANMAR", "MM"],
+                ["NAMIBIA", "NA"],
+                ["NAURU", "NR"],
+                ["NEPAL, FEDERAL DEMOCRATIC REPUBLIC OF", "NP"],
+                ["NETHERLANDS", "NL"],
+                ["NETHERLANDS ANTILLES", "AN"],
+                ["NEW CALEDONIA", "NC"],
+                ["NEW ZEALAND", "NZ"],
+                ["NICARAGUA", "NI"],
+                ["NIGER", "NE"],
+                ["NIGERIA", "NG"],
+                ["NIUE", "NU"],
+                ["NORFOLK ISLAND", "NF"],
+                ["NORTHERN MARIANA ISLANDS", "MP"],
+                ["NORWAY", "NO"],
+                ["OMAN", "OM"],
+                ["PAKISTAN", "PK"],
+                ["PALAU", "PW"],
+                ["PALESTINE, STATE OF", "PS"],
+                ["PANAMA", "PA"],
+                ["PAPUA NEW GUINEA", "PG"],
+                ["PARAGUAY", "PY"],
+                ["PERU", "PE"],
+                ["PHILIPPINES", "PH"],
+                ["PITCAIRN", "PN"],
+                ["POLAND", "PL"],
+                ["PORTUGAL", "PT"],
+                ["PUERTO RICO", "PR"],
+                ["QATAR", "QA"],
+                ["RÉUNION", "RE"],
+                ["ROMANIA", "RO"],
+                ["RUSSIAN FEDERATION", "RU"],
+                ["RWANDA", "RW"],
+                ["SAINT HELENA", "SH"],
+                ["SAINT KITTS AND NEVIS", "KN"],
+                ["SAINT LUCIA", "LC"],
+                ["SAINT PIERRE AND MIQUELON", "PM"],
+                ["SAINT VINCENT AND THE GRENADINES", "VC"],
+                ["SAMOA", "WS"],
+                ["SAN MARINO", "SM"],
+                ["SAO TOME AND PRINCIPE", "ST"],
+                ["SAUDI ARABIA", "SA"],
+                ["SENEGAL", "SN"],
+                ["SERBIA", "RS"],
+                ["SEYCHELLES", "SC"],
+                ["SIERRA LEONE", "SL"],
+                ["SINGAPORE", "SG"],
+                ["SLOVAKIA", "SK"],
+                ["SLOVENIA", "SI"],
+                ["SOLOMON ISLANDS", "SB"],
+                ["SOMALIA", "SO"],
+                ["SOUTH AFRICA", "ZA"],
+                ["SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS", "GS"],
+                ["SOUTH SUDAN", "SS"],
+                ["SPAIN", "ES"],
+                ["SRI LANKA", "LK"],
+                ["SUDAN", "SD"],
+                ["SURINAME", "SR"],
+                ["SVALBARD AND JAN MAYEN", "SJ"],
+                ["SWAZILAND", "SZ"],
+                ["SWEDEN", "SE"],
+                ["SWITZERLAND", "CH"],
+                ["SYRIAN ARAB REPUBLIC", "SY"],
+                ["TAIWAN", "TW"],
+                ["TAJIKISTAN", "TJ"],
+                ["TANZANIA, UNITED REPUBLIC OF", "TZ"],
+                ["THAILAND", "TH"],
+                ["TIMOR-LESTE", "TL"],
+                ["TOGO", "TG"],
+                ["TOKELAU", "TK"],
+                ["TONGA", "TO"],
+                ["TRINIDAD AND TOBAGO", "TT"],
+                ["TUNISIA", "TN"],
+                ["TURKEY", "TR"],
+                ["TURKMENISTAN", "TM"],
+                ["TURKS AND CAICOS ISLANDS", "TC"],
+                ["TUVALU", "TV"],
+                ["UGANDA", "UG"],
+                ["UKRAINE", "UA"],
+                ["UNITED ARAB EMIRATES", "AE"],
+                ["UNITED KINGDOM", "GB"],
+                ["UNITED STATES", "US"],
+                ["UNITED STATES MINOR OUTLYING ISLANDS", "UM"],
+                ["URUGUAY", "UY"],
+                ["UZBEKISTAN", "UZ"],
+                ["VANUATU", "VU"],
+                ["VENEZUELA", "VE"],
+                ["VIET NAM", "VN"],
+                ["VIRGIN ISLANDS, BRITISH", "VG"],
+                ["VIRGIN ISLANDS, U.S.", "VI"],
+                ["WALLIS AND FUTUNA", "WF"],
+                ["WESTERN SAHARA", "EH"],
+                ["YEMEN", "YE"],
+                ["ZAMBIA", "ZM"],
+                ["ZIMBABWE", "ZW"]
+            ]
+        },
+        "media_type": [
+            "audio/aac",
+            "application/x-abiword",
+            "application/x-freearc",
+            "video/x-msvideo",
+            "application/vnd.amazon.ebook",
+            "application/octet-stream",
+            "image/bmp",
+            "application/x-bzip",
+            "application/x-bzip2",
+            "application/x-cdf",
+            "application/x-csh",
+            "text/css",
+            "text/csv",
+            "application/msword",
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            "application/vnd.ms-fontobject",
+            "application/epub+zip",
+            "application/gzip",
+            "image/gif",
+            "text/html",
+            "image/vnd.microsoft.icon",
+            "text/calendar",
+            "application/java-archive",
+            "image/jpeg",
+            "text/javascript",
+            "application/json",
+            "application/ld+json",
+            "audio/midi audio/x-midi",
+            "text/javascript",
+            "audio/mpeg",
+            "video/mp4",
+            "video/mpeg",
+            "application/vnd.apple.installer+xml",
+            "application/vnd.oasis.opendocument.presentation",
+            "application/vnd.oasis.opendocument.spreadsheet",
+            "application/vnd.oasis.opendocument.text",
+            "audio/ogg",
+            "video/ogg",
+            "application/ogg",
+            "audio/opus",
+            "font/otf",
+            "image/png",
+            "application/pdf",
+            "application/x-httpd-php",
+            "application/vnd.ms-powerpoint",
+            "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+            "application/vnd.rar",
+            "application/rtf",
+            "application/x-sh",
+            "image/svg+xml",
+            "application/x-shockwave-flash",
+            "application/x-tar",
+            "image/tiff",
+            "video/mp2t",
+            "font/ttf",
+            "text/plain",
+            "application/vnd.visio",
+            "audio/wav",
+            "audio/webm",
+            "video/webm",
+            "image/webp",
+            "font/woff",
+            "font/woff2",
+            "application/xhtml+xml",
+            "application/vnd.ms-excel",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "application/xml",
+            "text/xml",
+            "application/vnd.mozilla.xul+xml",
+            "application/zip",
+            "video/3gpp",
+            "audio/3gpp",
+            "video/3gpp2",
+            "audio/3gpp2",
+            "application/x-7z-compressed"
+        ]
+    }
+}
