@@ -3,7 +3,7 @@
 
 ## JavaScript
 Notice that function call (FetchThis) is promisse by itself!!!
-Use data inside function ("*.then(response => {*") to be shure that data is arrived.
+Use data inside function > *.then(response => {* to be shure that data is arrived.
 ### Method type
 This script uses only **POST** method which covers all possible needs (DELETE and PUT methods are same as POST anyway, POST is also much secure than GET, so it's POST only).
 ### **JSON** and **TEXT** files
