@@ -4,7 +4,7 @@
 ## JavaScript
 Notice that function call (FetchThis) is promisse by itself!!!
 Use data inside function to be shure that data is arrived.
-> FetchThis("JSON", { FilePath: "./test/valid.json" }).then(response => { ...
+> FetchThis("JSON", { FilePath: "./test/valid.json" }).then(response => { // Play with data here...
 ### Method type
 This script uses only **POST** method which covers all possible needs (DELETE and PUT methods are same as POST anyway, POST is also much secure than GET, so it's POST only).
 ### **JSON** and **TEXT** files
